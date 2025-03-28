@@ -47,3 +47,12 @@ function displayPosts(posts) {
         blogPostsContainer.appendChild(postDiv);
     });
 }
+function filterPosts(category) {
+    fetch("db.json")
+        .then(response => response.json())
+        .then(data => {
+            const filteredPosts = data.posts.filter(post => post.category === category);
+            displayPosts(filteredPosts);
+        })
+        .catch(error => console.error("Error filtering posts:", error));
+}
