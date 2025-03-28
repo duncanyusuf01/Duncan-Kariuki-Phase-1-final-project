@@ -8,3 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => console.error("Error fetching data:", error));
 });
+function displayCategories(categories) {
+    const categoryList = document.getElementById("category-list");
+    categoryList.innerHTML = ""; // Clear existing items
+
+    categories.forEach(category => {
+        let li = document.createElement("li");
+        li.textContent = category;
+        li.addEventListener("click", () => filterPosts(category));
+        categoryList.appendChild(li);
+    });
+}
