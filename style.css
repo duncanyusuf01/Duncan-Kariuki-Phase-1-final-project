@@ -56,3 +56,14 @@ header {
     border-radius: 50%;
     margin-bottom: 10px;
 }
+.blog-post {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.upvote {
+    cursor: pointer;
+    color: #1e3a5f;
+}
