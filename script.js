@@ -19,3 +19,7 @@ function displayCategories(categories) {
         categoryList.appendChild(li);
     });
 }
+function displayUserInfo(owner) {
+    document.getElementById("blog-owner-img").src = owner.image;
+    document.getElementById("blog-owner-desc").textContent = owner.description;
+}
