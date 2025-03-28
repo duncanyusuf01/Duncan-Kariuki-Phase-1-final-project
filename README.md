@@ -26,7 +26,7 @@ JavaScript: Fetching and displaying data dynamically.
 # Setup Instructions
 
 1. Clone this repository:
-   git clone https://github.com/duncanyusuf01/Phase-1-final-project.git
+   https://github.com/duncanyusuf01/Duncan-Kariuki-Phase-1-final-project.git
 
 2. Navigate to the project directory:
    cd Phase-1-final-project
