@@ -23,3 +23,27 @@ function displayUserInfo(owner) {
     document.getElementById("blog-owner-img").src = owner.image;
     document.getElementById("blog-owner-desc").textContent = owner.description;
 }
+function displayPosts(posts) {
+    const blogPostsContainer = document.getElementById("blog-posts");
+    blogPostsContainer.innerHTML = ""; // Clear existing posts
+
+    posts.forEach(post => {
+        let postDiv = document.createElement("div");
+        postDiv.classList.add("blog-post");
+
+        postDiv.innerHTML = `
+            <h3>${post.title}</h3>
+            <p>${post.content}</p>
+            <span class="upvote">👍 ${post.upvotes}</span>
+        `;
+
+        // Handle upvote clicks
+        const upvoteBtn = postDiv.querySelector(".upvote");
+        upvoteBtn.addEventListener("click", () => {
+            post.upvotes += 1;
+            upvoteBtn.textContent = `👍 ${post.upvotes}`;
+        });
+
+        blogPostsContainer.appendChild(postDiv);
+    });
+}
